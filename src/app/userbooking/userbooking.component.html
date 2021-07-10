@@ -1,0 +1,35 @@
+<div class="container-fluid" id="back">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            <h2 [ngStyle]="{'color':'white'}" class="text-center">Your Bookings</h2>
+            <span class="text-danger" *ngIf="notvalid" id="err">Oops! You have no bookings</span>
+            <div class="row" *ngFor="let res of list">
+                <div class="card" id="jumbo">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-7 col-md-7 col-lg-6">
+                                <ul id="one">
+                                    <li>Booking ID : {{res.bookingId}}</li>
+                                    <li>Passenger Name : {{res.passengerName}}</li>
+                                    <li>Age : {{res.age}}</li>   
+                                    <li>Seats Booked : {{res.seatsBooked}}</li>
+                                    <li>Flight ID : {{res.flightId}}</li>
+                                    <li>Total Amount : {{res.totalAmount}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2" id="del">
+                                <button class="btn btn-danger" type="submit" (click)="delete(res.bookingId)">DELETE</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-4">
+                                <button class="btn btn-primary" type="submit" (click)="move(res.bookingId)" id="del">BOOKING DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 offset-1">
+            <button class="btn btn-dark" type="submit" (click)="back()" id="but">DASHBOARD</button>
+        </div>
+    </div>
+</div>

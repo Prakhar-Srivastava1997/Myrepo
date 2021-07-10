@@ -1,0 +1,100 @@
+<div class="container-fluid">
+    <button class="btn btn-info" type="submit" (click)="home()" id="btni">GO TO DASHBOARD</button>
+    <div class="row">
+        <div class="jumbotron" id="jumbo">
+            <h2 class="text-center" [ngStyle]="{'color':'red'}">Update Flight Page</h2>
+            <form #myForm="ngForm" (ngSubmit)="UpdateFlight(myForm)">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="flightname">Flight Name</label>
+                        <input type="text" class="form-control" id="flightname" name="flightname"
+                            placeholder="Enter Flight Name" ngModel #flightname="ngModel" required>
+                        <span class="text-danger" *ngIf="flightname.touched && !flightname.valid">
+                            Flight Name required
+                        </span>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="fcity">From</label>
+                            <input type="text" class="form-control" id="fcity" name="fcity" required
+                                placeholder="Enter From city" ngModel #fcity="ngModel">
+                            <span class="text-danger" *ngIf="fcity.touched && !fcity.valid">Please enter from
+                                city</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="tcity">To</label>
+                            <input type="text" class="form-control" id="tcity" name="tcity" required
+                                placeholder="Enter To city" ngModel #tcity="ngModel">
+                            <span class="text-danger" *ngIf="tcity.touched && !tcity.valid">Please enter to city</span>
+                        </div>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="adate">Arrival Date</label>
+                            <input type="date" class="form-control" id="adate" name="adate" required
+                                placeholder="Enter Arrival Date" ngModel #adate="ngModel">
+                            <span class="text-danger" *ngIf="adate.touched && !adate.valid">Please enter Arrival
+                                Date</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="ddate">Departure Date</label>
+                            <input type="date" class="form-control" id="ddate" name="ddate" required
+                                placeholder="Enter Departure Date" ngModel #ddate="ngModel">
+                            <span class="text-danger" *ngIf="ddate.touched && !ddate.valid">Please enter departure
+                                date</span>
+                        </div>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="atime">Arrival Time</label>
+                            <input type="time" class="form-control" id="atime" name="atime" required
+                                placeholder="Enter Arrival Time" ngModel #atime="ngModel">
+                            <span class="text-danger" *ngIf="atime.touched && !atime.valid">Please enter Arrival
+                                Time</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="dtime">Departure Time</label>
+                            <input type="time" class="form-control" id="dtime" name="dtime" required
+                                placeholder="Enter departure time" ngModel #dtime="ngModel">
+                            <span class="text-danger" *ngIf="dtime.touched && !dtime.valid">Please enter departure time</span>
+                        </div>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="form-group">
+                        <label for="fare">Ticket Price</label>
+                        <input type="text" class="form-control" id="fare" name="fare" placeholder="Enter ticket price"
+                            ngModel #fare="ngModel" required>
+                        <span class="text-danger" *ngIf="fare.touched && !fare.valid">
+                            Ticket price required
+                        </span>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="form-group">
+                        <label for="seats">Total Seats</label>
+                        <input type="text" id="seats" name="seats" placeholder="Enter Total Seats" ngModel
+                            #seats="ngModel" required class="form-control">
+                        <span class="text-danger" *ngIf="seats.touched && !seats.valid">Enter number of seats</span>
+                    </div>
+                </div><br />
+                <button type="submit" class="btn btn-primary" (click)="save()" id="btn" [disabled]="!myForm.valid">UPDATE
+                    FLIGHT</button>
+                <br />
+                <span class="text-success" *ngIf="result">Flight details updated successfuly!!</span>
+            </form>
+        </div>
+    </div>
+</div>

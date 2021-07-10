@@ -1,0 +1,74 @@
+<div id="one" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 offset-3" [ngStyle]="{'margin-top':'100px'}">
+            <h3 class="text-center">Search Flight</h3>
+            <form #regForm="ngForm" (ngSubmit)="Search(regForm)">
+                <div class="form-group">
+                    <label for="fcity">From</label>
+                    <input type="text" class="form-control" id="fcity" name="fcity"
+                           required placeholder="Enter From city" ngModel #fcity="ngModel">
+                    <span class="text-danger" *ngIf="fcity.touched && !fcity.valid">Please enter from city</span>       
+                  </div>
+                  <br/>
+                <div class="form-group">
+                    <label for="tcity">To</label>
+                    <input type="text" class="form-control" id="tcity" name="tcity"
+                           required placeholder="Enter To city" ngModel #tcity="ngModel">
+                    <span class="text-danger" *ngIf="tcity.touched && !tcity.valid">Please enter to city</span>       
+                           
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="dot">Date Of Travel</label>
+                  <input type="date" class="form-control" id="dot" name="dot"
+                         required placeholder="Enter Travel Date" ngModel #dot="ngModel">
+                  <span class="text-danger" *ngIf="dot.touched && !dot.valid">Please enter travel date</span>       
+                         
+              </div><br/>
+                <button class="btn btn-primary" type="submit" id="Search" [disabled]="!regForm.valid">Search</button>
+                <div *ngIf="sry">
+                  <span class="text-danger">Sorry! No flight available</span>
+                </div>
+            </form>
+            
+            <br/>
+            <div *ngIf="isValid && !sry">
+                <div *ngFor="let result of display">
+                    <div class="card mb-3" style="max-width: 650px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-3">
+                            <img [src]="'assets/photo/download.jfif'" class="card-img" alt="image" [ngStyle]="{'height':'290px', 'width':'170px'}">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <p>Flight ID: {{result.flightId}}</p>
+                                  <p>Flight Name: {{result.flightName}}</p>
+                                  <p>From City: {{result.fromCity}}</p>
+                                  <p>Fare: {{result.fare}}</p>
+                                  <p>Seats Available: {{result.noOfSeats}}</p>
+                                </div>
+                                <div class="col-sm-6">
+                                  <p>To City: {{result.toCity}}</p>
+                                  <p>Arrival Date: {{result.arrivalDate}}</p>
+                                  <p>Arrival Time: {{result.arrivalTime}}</p>
+                                  <p>Departure Date: {{result.departureDate}}</p>
+                                  <p>Departure Time: {{result.departureTime}}</p>
+                                </div>
+                              </div>
+                              <button value="submit" class="btn btn-primary" (click)="Book()">Book Now</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+                        
+                    
+        
+            
+        </div>
+    </div>
+  
+</div>

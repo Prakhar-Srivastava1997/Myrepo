@@ -1,0 +1,23 @@
+#one{
+    background-image: url('src\assets\photo\trans.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 625px;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#two{
+    margin-top: 80px;
+}
+
+#three{
+    margin-right: 30px;
+    margin-top: 80px;
+    color:aliceblue;
+}
+
+#icon{
+    margin-top: 10px;
+    margin-left: 100px;
+}

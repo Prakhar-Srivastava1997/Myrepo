@@ -1,0 +1,32 @@
+#one{
+    background-image: url('src\assets\photo\wooden.jfif');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 625px;
+}
+
+#two{
+    background-image: url('src/assets/photo/nature.jpg');
+    background-size: cover;
+    height:550px;
+    background-repeat: no-repeat;
+    background-size: auto 550px;
+    margin-top: 20px;
+}
+
+label{
+    color:violet;
+    font-weight: bold;
+}
+
+#three{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+span{
+    color:darkred;
+    font-weight: bold;
+}

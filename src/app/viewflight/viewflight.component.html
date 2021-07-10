@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <button class="btn btn-info" type="submit" (click)="back()" id="btn">GO BACK</button>
+    <div class="row">
+        <h2 class="text-center">AVAILABLE FLIGHTS</h2>
+        <table id="tab" class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Flight ID</td>
+                    <td>Flight Name</td>
+                    <td>From City</td>
+                    <td>To City</td>
+                    <td>Arrival Date</td>
+                    <td>Arrival Time</td>
+                    <td>Departure Date</td>
+                    <td>Departure Time</td>
+                    <td>Flight Fare</td>
+                    <td>Seats Available</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of fltdata">
+                    <td>{{res.flightId}}</td>
+                    <td>{{res.flightName}}</td>
+                    <td>{{res.fromCity}}</td>
+                    <td>{{res.toCity}}</td>
+                    <td>{{res.arrivalDate}}</td>
+                    <td>{{res.arrivalTime}}</td>
+                    <td>{{res.departureDate}}</td>
+                    <td>{{res.departureTime}}</td>
+                    <td>{{res.fare}}</td>
+                    <td>{{res.noOfSeats}}</td>
+                    <td><button class="btn btn-info" type="submit" (click)="update(res.flightId)">UPDATE</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

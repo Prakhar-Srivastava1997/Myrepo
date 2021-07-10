@@ -1,0 +1,28 @@
+#back{
+    background-image: url('src/assets/photo/trans.jpg');
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 625px;
+}
+
+#jumbo{
+    background-color: lightgray;
+    height: 180px;
+    margin-top: 10px;
+}
+
+#but{
+    float:right;
+    margin-top: 10px;
+}
+
+#err{
+    font-weight: bolder;
+    margin-left: 220px;
+    font-size:large;
+}
+
+#del{
+    margin-top: 50px;
+}

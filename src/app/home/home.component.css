@@ -1,0 +1,37 @@
+
+.contain{
+    background-image: url('src/assets/photo/background.jpg');
+      background-size: 1350px 600px;
+      background-repeat: no-repeat;
+      height: 601px;
+}
+
+#two{
+     font-size: 50px;
+}
+
+#three{
+    color: aliceblue;
+    text-align: center;
+    height: 100px;
+    padding-top: 30px;
+}
+
+#four{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#five{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#jump{
+    background-image: url('../../assets/photo/travel.jpg');
+    background-size: 1350px 500px;
+    background-repeat: no-repeat;
+    height: 501px;
+}

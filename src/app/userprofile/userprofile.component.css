@@ -1,0 +1,43 @@
+#one{
+    background-image: url('src/assets/photo/transparent.jpg');
+    background-size: cover;
+    min-height: 625px;
+    background-repeat: no-repeat;
+}
+
+#two{
+    background:transparent;
+    color: bisque;
+    height: 100px;
+    width: 100%;
+}
+
+.card{
+    height: 400px;
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 480px;
+    background: transparent;
+    border:transparent;
+}
+
+.card-body{
+    color:aliceblue;
+    background-color: darkslateblue;
+    text-align: center;
+    border-radius: 30%;
+}
+
+.card-header{
+    font-size: x-large;
+    border-bottom: 0rem;
+}
+
+h1{
+    margin-left: 30px;
+}
+
+button{
+    margin-top: 50px;
+    border-radius: 20%;
+}

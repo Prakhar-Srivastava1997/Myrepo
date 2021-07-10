@@ -1,0 +1,48 @@
+#back{
+    background-image: url('src/assets/photo/trans.jpg');
+    background-size: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 625px;
+}
+
+#one{
+    display: inline;
+    margin-top: 50px;
+}
+
+#two{
+    display: inline;
+    padding-left: 180px;
+}
+
+#jumbo{
+    height: 400px;
+    width: 800px;
+    margin-left: 280px;
+    margin-top: 80px;
+    background-color:lightgray;
+}
+
+#three{
+    padding-top: 40px;
+    margin-left: 250px;
+    color: green;
+}
+
+#four{
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.btn-space{
+    margin-right: 10px;
+}
+
+#five{
+    margin-bottom: 10px;
+    padding-left: 340px;
+    margin-top: 80px;
+}
+

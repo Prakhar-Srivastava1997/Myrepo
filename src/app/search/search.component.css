@@ -1,0 +1,20 @@
+#one{
+    background-image: url('src\assets\photo\cloud.jpg');
+    background-size: cover;
+    background-attachment: fixed;     
+    background-repeat: no-repeat;
+    min-height: 625px;
+}
+
+#two{
+    width: 800px;
+    margin-left: 280px;
+    margin-top: 150px;
+}
+
+.card-body{
+    background-color: darkslategrey;
+    color:aliceblue;
+}
+
+

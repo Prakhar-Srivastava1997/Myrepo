@@ -1,0 +1,22 @@
+<div class="container-fluid" id="back">
+    <div class="row">
+        <div class="jumbotron" id="jumbo">
+            <h2 id="three">Welcome! {{usrname}}</h2>
+            <p id="four">This is your dashboard {{usrname}}. From here you can search flight and also you can 
+               view your account profile and bookings that you have made. Below are the three buttons to do the respective 
+               activities. 
+            </p><br/>
+            <div id="one">
+                <div id="two">
+                    <button class="btn btn-primary btn-space" type="submit" (click)="search()">SEARCH FLIGHT</button>
+                    <button class="btn btn-primary btn-space" type="submit" (click)="view()">VIEW BOOKINGS</button>
+                    <button class="btn btn-primary btn-space" type="submit" (click)="profile()">VIEW PROFILE</button>
+                </div>
+            </div>
+            <br/>
+            <div id="five">
+                <button type="submit" class="btn btn-dark" (click)="back()">LOGOUT</button>
+            </div>
+        </div>
+    </div>
+</div>

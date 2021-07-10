@@ -1,0 +1,40 @@
+<div class="container" id="back">
+    <button class="btn btn-danger" type="submit" (click)="back()">GOTO DASHBOARD</button>
+    <div class="row">
+        <h2 class="text-center" id="head">YOUR BOOKING RECORD</h2>
+        <table id="tab" class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Booking Id</td>
+                    <td>Passenger Name</td>
+                    <td>Age</td>
+                    <td>Flight Id</td>
+                    <td>Flight Name</td>
+                    <td>From City</td>
+                    <td>To City</td>
+                    <td>Arrival Date</td>
+                    <td>Arrival Time</td>
+                    <td>Departure Date</td>
+                    <td>Departure Time</td>
+                    <td>Flight Fare</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of travellist">
+                    <td>{{res.bookingId}}</td>
+                    <td>{{res.passengerName}}</td>
+                    <td>{{res.age}}</td>
+                    <td>{{res.flightId}}</td>
+                    <td>{{res.flightName}}</td>
+                    <td>{{res.fromCity}}</td>
+                    <td>{{res.toCity}}</td>
+                    <td>{{res.arrivalDate}}</td>
+                    <td>{{res.arrivalTime}}</td>
+                    <td>{{res.departureDate}}</td>
+                    <td>{{res.departureTime}}</td>
+                    <td>{{res.fare}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

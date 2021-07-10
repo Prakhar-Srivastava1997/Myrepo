@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="row">
+        <button class="btn btn-info" type="submit" (click)="goback()" id="top">GoTo Dashboard</button>
+        <div class="jumbotron">
+            <h2 class="text-center">FLIGHT DETAILS</h2><br />
+            <div class="row">
+                <div class="col-lg-4 offset-2" id="col1">
+                    <p>Flight Number : {{fdata.flightId}}</p>
+                    <p>Flight Name : {{fdata.flightName}}</p>
+                    <p>From City : {{fdata.fromCity}}</p>
+                    <p>To City : {{fdata.toCity}}</p>
+                    <p>Seats Available : {{fdata.noOfSeats}}</p>
+                </div>
+                <div class="col-lg-4 offset-2">
+                    <p>Flight Fare : {{fdata.fare}}</p>
+                    <p>Arrival Date : {{fdata.arrivalDate}}</p>
+                    <p>Arrival Time : {{fdata.arrivalTime}}</p>
+                    <p>Departure Date : {{fdata.departureDate}}</p>
+                    <p>Departure Time : {{fdata.departureTime}}</p>
+                </div>
+            </div><br />
+            <div class="row">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <form #reg="ngForm" (ngSubmit)="Book(reg)" class="form-inline">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="form-group">
+                                        <label for="count">Total Passengers</label>
+                                        <input type="text" id="count" name="count"
+                                            placeholder="Enter number of passengers" class="form-control" required
+                                            ngModel #count="ngModel" [ngModel]="passenger"
+                                            (ngModelChange)="change($event)" />
+                                        <span class="text-danger" *ngIf="count.touched && !count.valid">Field
+                                            Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <button class="btn btn-primary" type="submit" [disabled]="!reg.valid"
+                                        [ngStyle]="{'margin-top':'23px'}">Continue</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><br />
+            <div *ngIf="isvalid">
+                <div class="row">
+                    <h2 id="one">Provide Passenger Details</h2>
+                    <form #myForm="ngForm" (ngSubmit)="submit(myForm)">
+
+                        <div *ngFor="let book of booklist; let i=index">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="form-group">
+                                        <label for="name" id="one">Passenger Name</label>
+                                        <input type="text" class="form-control" id="name" name="book_{{i}}"
+                                            placeholder="Enter Name" required ngModel #name="ngModel"
+                                            [(ngModel)]="book.passengername">
+                                        <span class="text-danger" *ngIf="name.touched && !name.valid">Field
+                                            Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="form-group">
+                                        <label for="age" id="one">Passenger Age</label>
+                                        <input type="text" class="form-control" id="age" name="book_{{i}}"
+                                            placeholder="Enter Age" required ngModel #age="ngModel"
+                                            [(ngModel)]="book.age">
+                                        <span class="text-danger" *ngIf="age.touched && !age.valid">Field
+                                            Required</span>
+                                    </div>
+                                </div>
+                                <!--<div class="col-lg-2">
+                                    <button type="button" class="btn btn-info" (click)="add()">Add Passenger</button>
+                                </div>-->
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn" [disabled]="!myForm.valid"
+                            >Submit</button><br/>
+                        <span class="text-success" *ngIf="succ">Booking Successful!!</span><br/>
+                        <div *ngIf="visible">
+                            <button class="btn btn-info" type="submit" (click)="save()">VIEW BOOKING</button>    
+                        </div>    
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

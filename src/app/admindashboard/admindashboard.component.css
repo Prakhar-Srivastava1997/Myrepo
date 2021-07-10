@@ -1,0 +1,33 @@
+#jumbo{
+    margin-top: 50px;
+    margin-left: 300px;
+    height: 400px;
+    width: 800px;
+    background-color:lightslategrey;
+}
+
+#head{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+#btn1{
+    margin-top: 50px;
+}
+
+#btn2{
+    margin-top: 20px;
+}
+#btn3{
+    margin-top: 20px;
+}
+
+#btn4{
+    margin-top: 20px;
+}
+#para{
+    color:aliceblue;
+    margin-top: 20px;
+    margin-left: 20px;
+}

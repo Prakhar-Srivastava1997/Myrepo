@@ -1,0 +1,23 @@
+#jumbo{
+width: 500px;    
+background-color: lightgray;
+margin-top: 50px;
+margin-left: 400px;
+background-size: cover;
+min-height: 600px;
+}
+
+#btn{
+    margin-left: 10px;
+    width: 450px;
+}
+
+span{
+    font-weight: bold;
+}
+
+#btni{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}

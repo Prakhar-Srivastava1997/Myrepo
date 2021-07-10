@@ -1,0 +1,21 @@
+#tab{
+    width: 1200px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+thead{
+    background-color: darkslategray;
+    color: aliceblue;
+}
+
+h2{
+    margin-top: 10px;
+}
+
+#btn{
+    float: right;
+    margin-right: 10px;
+    width: 110px;
+    margin-top: 10px;
+}

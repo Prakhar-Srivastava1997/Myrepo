@@ -1,0 +1,39 @@
+<div class="container-fluid" id="one">
+    <div class="row">
+        <div class="col-lg-5 offset-1">
+            <div class="card" id="two">
+                <div class="card-body">
+                    <h2 class="card-title">Admin LogIn</h2>
+                    <form #regForm="ngForm" (ngSubmit)="Login(regForm)">
+                        <div class="form-group">
+                            <label for="username">*UserName</label>
+                            <input type="text" class="form-control" id="username" name="username" required
+                                placeholder="Enter your name" ngModel #username="ngModel">
+                            <span class="text-danger" *ngIf="username.touched && !username.valid">User name is
+                                required</span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="password">*Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required
+                                placeholder="Enter your password" ngModel #password="ngModel">
+                            <span class="text-danger" *ngIf="password.touched && !password.valid">Password is
+                                required</span>
+                        </div>
+                        <br />
+                        <button class="btn btn-primary" type="submit" id="book"
+                            [disabled]="!regForm.valid">Login</button><br />
+                        <span class="text-success" *ngIf="isvalid" [ngStyle]="{'font-weight':'bold'}">Login Successful!!</span>
+                        <span class="text-danger" *ngIf="notvalid" [ngStyle]="{'font-weight':'bold'}">Sorry!Invalid Credentials</span> 
+                        <br/><button class="btn btn-info" type="submit" *ngIf="isvalid" (click)="hello()">ADMIN DASHBAORD</button>   
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-5 offset-1">
+            <h2 class="text-danger text-center" [ngStyle]="{'margin-top':'55px'}">PRIVILEDGED ACCOUNT</h2>
+            <img [src]="'assets/photo/adminicon.jpg'" alt="image" id="icon">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a routerLink="#">
+        <img src="../../assets/photo/logo.jpg" height="50px" width="100px" alt="" [ngStyle]="{'margin-left':'10px'}">
+      </a>
+      <ul class="navbar-nav ml-auto" [ngStyle]="{'margin-left':'20px'}">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" [ngStyle]="{'font-weight':'bold'}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" [ngStyle]="{'font-weight':'bold'}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin" [ngStyle]="{'font-weight':'bold'}">Admin</a>
+        </li>
+      </ul>
+    </nav>
+</div>
+  <div id ="one" class="contain">
+    <h2 class="text text-danger text-center" id="two">Welcome to {{home}}!!</h2>
+    <p [ngStyle]="{'text-align':'center', 'color':'black'}">{{para}}</p>
+  </div>
+  
+      <div class="jumbotron" id="jump">
+        <h2 class="text-danger text-center">Start Your Journey With Us</h2>
+        <p class="text-center">{{aboutus}}</p>
+      </div>
+
+  
+  <footer>
+  <div class="bg-dark">
+    <div class="row">
+      <div class="col-lg-4" id="three">All rights reserved.</div>
+      <div class="col-lg-4" id="four">{{contact}}</div>
+      <div class="col-lg-4" id="five">{{mail}}</div>
+    </div>
+  </div>
+  </footer>
+
+

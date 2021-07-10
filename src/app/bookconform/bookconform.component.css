@@ -1,0 +1,22 @@
+#tab{
+    width: 1020px;
+    margin-top: 20px;
+    margin-left: 60px;
+    color: aliceblue;
+}
+
+#back{
+    background-color: darkslategrey;
+    margin-left: 20px 20px;
+    margin-top: 50px;
+}
+
+#head{
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.btn{
+    margin-top: 10px;
+    float: right;
+}

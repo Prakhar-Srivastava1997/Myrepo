@@ -1,0 +1,36 @@
+<div class="container-fluid" id="one">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="jumbotron" id="two">
+                <h1 class="text-center" [ngStyle]="{'color':'violet'}">Sign In Page</h1>
+                <p [ngStyle]="{'font-weight':'bold'}" id="three">(*)Fields are mandatory</p>
+                <form #regForm="ngForm" (ngSubmit)="Login(regForm)" id="three">
+                    <div class="form-group">
+                        <label for="username">*User Name</label>
+                        <input type="text" class="form-control" id="username" name="username" required
+                            placeholder="Enter your name" ngModel #username="ngModel">
+                        <span *ngIf="username.touched && !username.valid">User name is
+                            required</span>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="password">*Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required
+                            placeholder="Enter your password" ngModel #password="ngModel">
+                        <span *ngIf="password.touched && !password.valid">Password is
+                            required</span>
+                    </div>
+                    <br/>
+                    <button class="btn btn-primary" type="submit" id="book"
+                        [disabled]="!regForm.valid">Login</button><br />
+                    <div *ngIf="resvalid">
+                        <span class="text-success">Login Successful!!</span><br/>
+                        <!--<a routerLink="/searchflight" [ngStyle]="{'cursor':'pointer', 'font-weight':'bold'}">Search Flight</a>-->
+                        <button type="submit" class="btn btn-info" (click)="dashBoard()">GO TO DASHBOARD</button>
+                    </div>
+                    <span class="text-danger" *ngIf="resinvalid">oops!Wrong Credentials</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

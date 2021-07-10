@@ -1,0 +1,33 @@
+.jumbotron{
+    width: 900px;
+    height:300px;
+    background-color: darkslategrey;
+    color: azure;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+#col1{
+    margin-left: 120px;
+}
+
+#one{
+    color: black;
+}
+
+#btn{
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#top{
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 1200px;
+}
